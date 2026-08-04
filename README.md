@@ -1,14 +1,17 @@
 # 🧮 Ganesh Calculator
 
 A simple calculator built using Python.
+## ✨ Features
 
-## Features
-
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Exit
+- ➕ Addition
+- ➖ Subtraction
+- ✖️ Multiplication
+- ➗ Division
+- 📐 Modulus
+- 🔥 Power
+- ✅ Input Validation
+- ❌ Division by Zero Handling
+- 🔄 Menu Driven Program
 
 ## Technologies
 

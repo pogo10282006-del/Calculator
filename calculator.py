@@ -1,49 +1,65 @@
-print("\n" + "=" * 40)
-print("        GANESH CALCULATOR v1.0")
-print("=" * 40)
+def show_menu():
+    print("\n" + "=" * 45)
+    print("          🧮 GANESH CALCULATOR")
+    print("=" * 45)
+    print("1. ➕ Addition")
+    print("2. ➖ Subtraction")
+    print("3. ✖️ Multiplication")
+    print("4. ➗ Division")
+    print("5. % Modulus")
+    print("6. ^ Power")
+    print("7. 🚪 Exit")
+    print("=" * 45)
 
-print("1. Addition")
-print("2. Subtraction")
-print("3. Multiplication")
-print("4. Division")
-print("5. Exit")
 
-choice = int(input("\nChoose an option (1-5): "))
+while True:
+    show_menu()
 
-if choice == 1:
-    num1 = int(input("Enter first number: "))
-    num2 = int(input("Enter second number: "))
-    print("-" * 40)
-    print("✅ Result =", num1 + num2)
-    print("-" * 40)
+    try:
+        choice = int(input("Choose an option (1-7): "))
 
-elif choice == 2:
-    num1 = int(input("Enter first number: "))
-    num2 = int(input("Enter second number: "))
-    print("-" * 40)
-    print("✅ Result =", num1 - num2)
-    print("-" * 40)
+        if choice == 7:
+            print("\n👋 Thank you for using Ganesh Calculator!")
+            print("Have a great day ❤️")
+            break
 
-elif choice == 3:
-    num1 = int(input("Enter first number: "))
-    num2 = int(input("Enter second number: "))
-    print("-" * 40)
-    print("✅ Result =", num1 * num2)
-    print("-" * 40)
+        if choice not in [1, 2, 3, 4, 5, 6]:
+            print("❌ Invalid choice!")
+            continue
 
-elif choice == 4:
-    num1 = int(input("Enter first number: "))
-    num2 = int(input("Enter second number: "))
+        num1 = float(input("Enter first number : "))
+        num2 = float(input("Enter second number: "))
 
-    if num2 == 0:
-        print("❌ Division by zero is not allowed.")
-    else:
-        print("-" * 40)
-        print("✅ Result =", num1 / num2)
-        print("-" * 40)
+        if choice == 1:
+            result = num1 + num2
+            operation = "+"
 
-elif choice == 5:
-    print("👋 Thank you for using Ganesh Calculator!")
+        elif choice == 2:
+            result = num1 - num2
+            operation = "-"
 
-else:
-    print("❌ Invalid Choice!")
+        elif choice == 3:
+            result = num1 * num2
+            operation = "*"
+
+        elif choice == 4:
+            if num2 == 0:
+                print("❌ Division by zero is not allowed.")
+                continue
+            result = num1 / num2
+            operation = "/"
+
+        elif choice == 5:
+            result = num1 % num2
+            operation = "%"
+
+        elif choice == 6:
+            result = num1 ** num2
+            operation = "^"
+
+        print("\n" + "-" * 45)
+        print(f"Result : {num1} {operation} {num2} = {result}")
+        print("-" * 45)
+
+    except ValueError:
+        print("❌ Please enter valid numbers only.")

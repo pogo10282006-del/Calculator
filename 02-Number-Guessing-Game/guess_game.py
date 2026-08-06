@@ -111,4 +111,3 @@ while True:
             exit()
 
         else:
-            print("❌ Please enter only 'y' or 'n'.")

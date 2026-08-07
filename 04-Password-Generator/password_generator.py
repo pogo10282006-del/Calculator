@@ -129,7 +129,7 @@ while True:
     print(f"✅ Symbols   : {'Yes' if use_symbols == 'y' else 'No'}")
 
     print("=" * 60)
-
+    
     again = get_yes_no("\nGenerate Another Password? (y/n): ")
 
     if again == "n":
